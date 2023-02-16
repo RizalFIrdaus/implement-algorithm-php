@@ -2,11 +2,7 @@
 
 namespace Rizal\Algoritma\BubbleShort;
 
-use PhpParser\Node\Expr\Print_;
 use PHPUnit\Framework\TestCase;
-
-use function PHPUnit\Framework\assertEquals;
-use function PHPUnit\Framework\assertNotEquals;
 
 class BubbleShortTest extends TestCase
 {
@@ -17,8 +13,8 @@ class BubbleShortTest extends TestCase
         // [2,4,3,1,6,9] > Looping Sekali,
         // [2,3,1,4,6,9] > Harus Nested Loop untuk melakukan pengulangan selanjutnya
         $result = BubbleShort::run($data);
-        assertNotEquals([6, 2, 4, 3, 1, 9, 12, 3, 3, 7, 2, 7, 1, 0, 2, 3, 6, 3], $result);
+        self::assertNotEquals([6, 2, 4, 3, 1, 9, 12, 3, 3, 7, 2, 7, 1, 0, 2, 3, 6, 3], $result);
         // Data Harus Berurut
-        assertEquals([0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 6, 6, 7, 7, 9, 12], $result);
+        self::assertEquals([0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 6, 6, 7, 7, 9, 12], $result);
     }
 }
